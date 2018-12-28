@@ -1,1 +1,15 @@
 <h1>Counter</h1>
+<hr/>
+<h2>Your sentence is </h2>
+<p>{{text}}</p>
+<hr/>
+
+<h2>Total word counted </h2>
+<p>{{wordcount}}</p>
+<hr/>
+
+<h2>Indivisual word counting</h2>
+{% for y,x in worddict.items %}
+<b>{{y}}</b> : {{x}}
+<br/>
+{% endfor %}
