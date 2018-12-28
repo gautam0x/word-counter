@@ -1,13 +1,14 @@
 <h1>Counter</h1>
+<a href="{% url 'home' %}" >Home</a> ||
 <a href="{% url 'about' %}" >About Us</a>
-<hr/>
+<br/>
 <h2>Your sentence is </h2>
 <p>{{text}}</p>
-<hr/>
+<br/>
 
 <h2>Total word counted </h2>
 <p>{{wordcount}}</p>
-<hr/>
+<br/>
 
 <h2>Indivisual word counting</h2>
 {% for y,x in worddict %}
