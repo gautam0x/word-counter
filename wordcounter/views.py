@@ -1,4 +1,5 @@
 from django.shortcuts import render
+import operator
 
 def home(request):
     return render(request,'home.html')
@@ -15,4 +16,6 @@ def count(request):
         else:
             worddict[word] = 1
 
-    return render(request,'count.html',{'text':text,'wordcount':len(wlist),'worddict':worddict})
+    sortedworddict = sorted(worddict.items() , key=operator.itemgetter(1) ,reverse=True)
+
+    return render(request,'count.html',{'text':text,'wordcount':len(wlist),'worddict':sortedworddict})
